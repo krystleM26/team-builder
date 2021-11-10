@@ -29,12 +29,13 @@ h2 {
 }
 label {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 input, select, button {
   height: 1.5rem;
   width: 150px;
-  margin: 8px 8px 8px 0;
+  margin: 5%;
 }
 button {
   color: crimson;
@@ -50,4 +51,10 @@ button {
 .submit {
   display: flex;
   justify-content: flex-end;
+}
+
+form {
+  display: flex;
+  width: 4%;
+  justify-content: space-evenly;
 }

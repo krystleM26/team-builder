@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Team App</h1>
+      <h1> Alien PlayGround</h1>
       <Form values={values} change={onChange} submit={onSubmit} />
     </div>
   );
