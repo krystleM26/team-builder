@@ -1,27 +1,54 @@
 import React from 'react';
 
 
-const Form = (props) ={
+const Form = (props) => {
+   const handleChange =event => {
+    const { name, value } = event.target
 
+    props.change(name,value);
+   } 
+   
+   const handleSubmit = event => {
+       event.preventDefault();
+       props.submit();
+    }
+   
 
 
 
 return (
-    <form> 
-            <label>Name
+    <form onSubmit={handleSubmit}> 
+         <label> Species
+                <input 
+                type="text"
+                name="name"
+                values={props.values.species}
+                onChange={handleChange}
+
+                />
+
+         </label>
+
+            <label>Email
                 <input
-                    type="text"
-                    name="name"
-                    values={values.name}
-                    onChange={onChange}
-                    maxLength="30"
-                    placeholder="Enter Your Name Here!"
+                type="email"
+                name="email"
+                values={props.values.email}
+                onChange={handleChange}
                 />
             </label>
 
-      
+            <label>Alien
+                <input
+                type="checkbox"
+                values={props.values.email}
+                onChange={handleChange}
+
+                />
+            </label>
+            <input type="submit" value="Creat your team!" />
     </form>
-    
+
     )
 }
 
