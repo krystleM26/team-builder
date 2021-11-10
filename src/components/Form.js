@@ -2,9 +2,9 @@ import React from 'react';
 
 
 const Form = (props) => {
-   const handleChange =event => {
+    console.log(props)
+    const handleChange =event => {
     const { name, value } = event.target
-
     props.change(name,value);
    } 
    
@@ -12,17 +12,14 @@ const Form = (props) => {
        event.preventDefault();
        props.submit();
     }
-   
-
-
 
 return (
     <form onSubmit={handleSubmit}> 
-         <label> Species
+         <label> Planet
                 <input 
                 type="text"
                 name="name"
-                values={props.values.species}
+                values={props.values.name}
                 onChange={handleChange}
 
                 />
@@ -38,11 +35,13 @@ return (
                 />
             </label>
 
-            <label>Alien
+            <label>Alien 
                 <input
                 type="checkbox"
+                name="role"
                 values={props.values.email}
                 onChange={handleChange}
+                placeholder="Welcome to Space"
 
                 />
             </label>
